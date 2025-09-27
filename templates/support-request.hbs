@@ -1,0 +1,19 @@
+{{#>layout}}
+  <h2>{{#if arabic}}تم استلام رسالة مساعدة{{else}}Support message received!{{/if}}</h2>
+
+  <p class="mb0"><b>{{#if arabic}}الأسم:{{else}}Name:{{/if}}</b></p>
+  <p>{{name}}</p>
+
+  <p class="mb0"><b>{{#if arabic}}الرسالة:{{else}}Message:{{/if}}</b></p>
+  <p>{{message}}</p>
+
+  {{#if email}}
+    <p class="mb0"><b>{{#if arabic}}البريد الالكتروني:{{else}}Email:{{/if}}</b></p>
+    <p>{{email}}</p>
+  {{/if}}
+
+  {{#if phone}}
+    <p class="mb0"><b>{{#if arabic}}رقم الهاتف:{{else}}Phone:{{/if}}</b></p>
+    <p>{{phone}}</p>
+  {{/if}}
+{{/layout}}

@@ -1,0 +1,238 @@
+:root {
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /*color-scheme: dark;*/
+    --bg-color: rgb(30 31 35);
+    --text-color: #bbbbbb;
+    --border-color: #505050;
+    --paper-bg: #151520;
+  }
+
+  .swagger-ui .model-toggle:after {
+    filter: invert(1);
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    /*color-scheme: light;*/
+    --bg-color: #fafafa;
+    --text-color: black;
+    --border-color: rgba(59, 65, 81, 0.3);
+    --paper-bg: #f0f0f0;
+  }
+}
+
+.swagger-ui input[type='email'],
+.swagger-ui input[type='file'],
+.swagger-ui input[type='password'],
+.swagger-ui input[type='search'],
+.swagger-ui input[type='text'],
+.swagger-ui textarea {
+  background: initial;
+  color: initial;
+}
+
+.swagger-ui .info .title,
+.swagger-ui .renderedMarkdown p,
+.swagger-ui .model-title,
+.swagger-ui .opblock .opblock-summary-path,
+.swagger-ui .opblock .opblock-summary-description,
+.swagger-ui .opblock .opblock-section-header h4,
+.swagger-ui .btn,
+.swagger-ui .opblock-description-wrapper p,
+.swagger-ui .tab li,
+.swagger-ui td[class],
+.swagger-ui th[class],
+.swagger-ui .parameter__name,
+.swagger-ui .parameter__type,
+.swagger-ui,
+.swagger-ui section.models h4,
+.swagger-ui .model,
+.swagger-ui .opblock-tag small,
+.swagger-ui .opblock .opblock-section-header > label,
+.swagger-ui .body-param-options label,
+.swagger-ui .info p,
+.swagger-ui .info .base-url,
+.swagger-ui .scheme-container .schemes > label,
+.swagger-ui .opblock-title_normal,
+.swagger-ui .opblock .opblock-summary-path__deprecated,
+.swagger-ui .dialog-ux .modal-ux-header h3,
+.swagger-ui .dialog-ux .modal-ux-content h4,
+.swagger-ui .dialog-ux .modal-ux-content p,
+.swagger-ui label {
+  color: var(--text-color);
+}
+
+svg {
+  fill: var(--text-color);
+}
+
+.swagger-ui .opblock-tag,
+.swagger-ui section.models > h4,
+.swagger-ui section.models .model-container {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+}
+
+.swagger-ui .opblock-tag {
+  margin-bottom: 0;
+}
+
+.models button {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.swagger-ui .opblock-tag-section {
+  margin-bottom: 0.5rem;
+}
+
+.swagger-ui .opblock-tag-section > div {
+  box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+  padding: 0.5rem !important;
+  border-radius: 8px;
+  border: 1px solid var(--border-color) !important;
+  margin-top: -15px !important;
+  padding-top: 2rem !important;
+  background-color: var(--paper-bg);
+}
+
+.swagger-ui section > div > span:first-of-type .opblock-tag-section {
+  border-radius: 12px 12px 0px 0px;
+}
+
+.swagger-ui section > div > span:last-of-type .opblock-tag-section {
+  border-radius: 0px 0px 12px 12px;
+}
+
+.swagger-ui section.models.is-open h4 {
+  border-bottom: 1px solid var(--border-color);
+}
+
+body,
+.swagger-ui .scheme-container {
+  background-color: var(--bg-color);
+}
+
+.swagger-ui .opblock .opblock-section-header {
+  background-color: transparent;
+}
+
+.swagger-ui .opblock-tag {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  z-index: 2;
+}
+
+.swagger-ui .opblock-tag:hover {
+  background-color: var(--bg-color);
+}
+
+table > tbody > tr > td.parameters-col_description {
+  font-size: 0.9em;
+}
+
+table > tbody > tr > td.parameters-col_description > div {
+  padding-bottom: 1rem;
+}
+
+table > tbody > tr {
+  border-bottom: 1px solid var(--border-color);
+}
+
+table > tbody > tr > td {
+  padding-block: 1rem !important;
+}
+
+table > tbody > tr > td.parameters-col_name > div.parameter__name {
+  white-space: nowrap;
+}
+
+table > tbody > tr > td:first-of-type {
+  min-width: 200px !important;
+}
+
+.topbar,
+table > thead > tr > td.col_header.response-col_links,
+table > tbody > tr > td.response-col_links {
+  display: none;
+}
+
+.schema-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: fit-content;
+}
+
+.schema-links a {
+  text-decoration: none;
+}
+
+.swagger-ui .scheme-container .schemes {
+  align-items: center;
+}
+
+/** Components */
+
+body .swagger-ui select,
+body .swagger-ui select[multiple] {
+  appearance: none;
+  background-color: var(--bg-color);
+  flex: 1;
+  padding-block: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  width: 20em;
+  min-height: 40px;
+  overflow: hidden;
+  box-shadow: 0px 5px 8px -5px rgba(0, 0, 0, 0.2);
+  border-color: currentColor;
+  border-width: 1px;
+  color: var(--text-color);
+}
+
+body .swagger-ui select:not([multiple]) {
+  background-image:
+    linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(1em + 4px),
+    calc(100% - 15px) calc(1em + 4px);
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+  padding-inline: 1em 3em;
+}
+
+body .swagger-ui select[multiple] {
+  padding-top: 1rem;
+  padding-inline: 1em;
+}
+
+body .swagger-ui select[disabled] {
+  background-color: transparent;
+  color: initial;
+}
+
+.swagger-ui .model-box-control:focus,
+.swagger-ui .models-control:focus,
+.swagger-ui .opblock-summary-control:focus {
+  outline: none;
+}
+
+.swagger-ui .dialog-ux .modal-ux {
+  background-color: var(--bg-color);
+}
+
+textarea {
+  border: 1px solid var(--border-color) !important;
+}
